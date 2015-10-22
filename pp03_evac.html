@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>pp03_evac</title>
+      	<link href="stockImageGallery.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="bodywrapper">
+            <div class="vMidway"><!--start of vertical centre container div-->
+                <div class="spaceB2e txt_alignCenter"><!-- Start of fixed body header section -->
+                    <h1>Fire Safety</h1> 
+                </div> <!-- End of fixed body header section -->
+                
+                <div id="div_alarm" class="spaceB2e txt_alignCenter"><!-- Alarm; left div-->
+              		<a href="start.html"><button class="red_bkGnd cntrWidth spaceB1e" type="button" name="btn_Return" >Return</button></a>
+            	</div>
+                
+                <div class="spaceB2e">
+                     <div id="div_response">
+                     	<p>Correct response. Learn where your fire exits and assembly points are. 
+                        	<ul>
+                            	<li>Obey your teacher.</li>
+                            	<li>Line up and march out in a line together.</li>
+                            	<li>Head to your designated assembly area. Let the fire fighters attend to the fire.</li>
+                                <li>If smoke is thick, keep low to the floor and make your way to the nearest fire exit as quick as posible—don't panic!</li>
+                                <li>If fire is sudden and you can't see or hear your teacher, make your own way to the fire exit helping anybody you see along the way.</li>
+                                <li>If your cloths catch fire, drop to the ground and roll around to smother the flames.</li>
+                            </ul>
+                        </p>
+                     </div>
+                </div>
+                
+            </div><!--end of vertical centre container div-->
+        </div><!-- end tag of bodywrapper -->
+		<script type="text/javascript">
+			function noAlarm() {	
+				document.getElementById('div_alarm').style.display = 'none';
+				document.getElementById('div_fire').style.display = 'block';
+			}
+			function alarm() {
+				document.getElementById('div_fire').style.display = 'none';	
+				document.getElementById('div_alarm').style.display = 'block';
+			}
+		</script>
+	</body>
+</html>

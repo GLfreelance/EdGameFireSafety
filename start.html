@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>index</title>
+      	<link href="stockImageGallery.css" rel="stylesheet" type="text/css" />
+	</head>
+    
+	<body>
+		<div id="bodywrapper">
+            <div class="vMidway div-centerBlock txt_alignCenter"><!--start of vertical centre container div-->
+                <div>
+                    <div class="spaceB2e txt_alignCenter"><!-- Start of fixed body header section -->
+                        <h1 ondblclick="window.open('pp03_evac.html');">Fire Safety</h1> 
+                    </div> <!-- End of fixed body header section -->
+                    
+                    <div id="div_alarm" class="spaceB2e txt_alignCenter"><!-- Alarm; left div-->
+                        <p class="spaceY2e">
+                            Is the fire alarm sounding?
+                        </p>
+                        <a href="pp01_options.html">
+                        <button class="red_bkGnd spaceY2e" type="button" name="btnAlarmYes">Yes</button></a>
+                        <button class="spaceY2e" type="button" name="btnAlarmNo" onclick="noAlarm()">No</button>
+                    </div>
+                          
+                    <div id="div_fire" class="spaceB2e txt_alignCenter"><!--Fire; right div-->    
+                        <p class="spaceY2e">
+                            Is there a fire?
+                        </p>
+                        <button class="spaceY2e" type="button" name="btnFireNo" onclick="alarm()">No</button>
+                        <a href="pp01_options.html">
+                        <button class="red_bkGnd spaceY2e" type="button" name="btnFireYes">Yes</button></a>
+                    </div>
+                </div>
+            </div><!--end of vertical centre container div-->
+        </div><!-- end tag of bodywrapper -->
+         <script type="text/javascript">
+			document.getElementById('introVideo').addEventListener('ended',myHandler,false);
+    		
+			function myHandler(e) {
+				document.getElementById('div_video').style.display = 'none';	
+				document.getElementById('div_game').style.display = 'block';
+			}		
+			function noAlarm() {	
+				document.getElementById('div_alarm').style.display = 'none';
+				document.getElementById('div_fire').style.display = 'block';
+			}
+			function alarm() {
+				document.getElementById('div_fire').style.display = 'none';	
+				document.getElementById('div_alarm').style.display = 'block';
+			}
+        </script>
+	</body>
+</html>

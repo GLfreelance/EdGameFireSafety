@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>pp02_hide</title>
+      	<link href="stockImageGallery.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="bodywrapper">
+            <div class="vMidway"><!--start of vertical centre container div-->
+                <div class="spaceB2e txt_alignCenter"><!-- Start of fixed body header section -->
+                    <h1 ondblclick="window.open('pp03_evac.html');">Fire Safety</h1> 
+                </div> <!-- End of fixed body header section -->
+                
+                <div id="div_alarm" class="spaceB2e txt_alignCenter"><!-- Alarm; left div-->
+              		<a href="start.html"><button class="red_bkGnd cntrWidth spaceB1e" type="button" name="btn_Return" >Return</button></a>
+            	</div>
+            
+                <div class="spaceB2e txt_alignCenter">
+                    <div id="div_response">
+                        <p id="txt_response"><!--Javascript will output the response text here--></p>    
+                    </div>
+                </div>
+                
+            </div><!--end of vertical centre container div-->
+        </div><!-- end tag of bodywrapper -->
+		<script type="text/javascript">
+			function response() {
+				resp=Array()
+				resp[0] = "Hide! Not a good idea. If the heat misses you the smoke is likely to choke you! Do as your teacher instructs and make your way the the designated assembly area.";
+				resp[1] = "Hide, my foot. If your teacher can't be found get to your designated evacuation assembly area and be counted, otherwise follow your teachers instruction.";
+				resp[2] = "Hide!!! Fire spreads in all directions. It will burn you in hiding as easily as not in hiding. You need to listen to the teachers instruction and make your way to the designated assembly area.";
+				resp[3] = "You can't hide from everything you know! Show everybody you are not afraid. Follow the teachers instruction and meet them at the designated assembly area. You might even be able to help others get there as well!";
+				resp[4] = "Hide! Fire doesn't play hide and seek. It is pretty good at burning up most hiding places though. Better listen to the teacher and evacuate to the designated assembly area.";
+				var randNo=Math.floor(Math.random()*5);
+				document.getElementById("txt_response").innerHTML = resp[randNo];
+			 }
+			 window.onload = response;
+		</script>
+	</body>
+</html>

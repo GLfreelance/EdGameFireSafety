@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>pp01_options</title>
+      	<link href="stockImageGallery.css" rel="stylesheet" type="text/css" />
+	</head>
+    
+	<body>
+		<div id="bodywrapper">
+            <div class="vMidway"><!--start of vertical centre container div-->
+                <div class="spaceB2e txt_alignCenter"><!-- Start of fixed body header section -->
+                    <h1 ondblclick="window.open('pp03_evac.html');">Fire Safety</h1> 
+                </div> <!-- End of fixed body header section -->
+                
+                <div id="div_alarm" class="spaceB2e txt_alignCenter"><!-- Alarm; left div-->
+              		<p class="spaceY2e">
+                        What should I do?
+                    </p>
+                    <li class="product">
+                    	<a href="pp02_hide.html">
+                        <button class="blue_bkGnd cntrWidth spaceB1e" type="button" name="btn_Hide">Hide</button>
+                		</a>
+                	</li>
+                    <li class="product">
+                    	<a href="pp02_ignore.html">
+                        <button class="blue_bkGnd cntrWidth spaceB1e" type="button" name="btn_Ignore">Ignore it</button>
+                        </a>
+                    </li>
+                    <li class="product">
+                    	<a href="pp02_findFire.html">
+                        <button class="blue_bkGnd cntrWidth spaceB1e" type="button" name="btn_FindIt">Find the fire</button>
+                        </a>
+                    </li>
+                    <li class="product">
+                    	<a href="pp02_pray.html">
+                        <button class="blue_bkGnd cntrWidth spaceB1e" type="button" name="btn_Pray">Pray</button>
+                        </a>
+                  	</li>
+                    <li class="product">
+                    	<a href="pp03_evac.html">
+                        <button class="blue_bkGnd cntrWidth spaceB1e" type="button" name="btn_Evacuate">Evacuate</button>
+                        </a>
+                    </li>
+                    <li class="product">
+                    	<a href="start.html">
+                    	<button class="red_bkGnd cntrWidth spaceB1e" type="button" name="btn_Return" >Return</button>
+                        </a>
+                    </li>
+            	</div>
+                
+            </div><!--end of vertical centre container div-->
+        </div><!-- end tag of bodywrapper -->
+        <script type="text/javascript">
+			function noAlarm() {	
+				document.getElementById('div_alarm').style.display = 'none';
+				document.getElementById('div_fire').style.display = 'block';
+			}
+			function alarm() {
+				document.getElementById('div_fire').style.display = 'none';	
+				document.getElementById('div_alarm').style.display = 'block';
+			}
+		</script>
+	</body>
+</html>

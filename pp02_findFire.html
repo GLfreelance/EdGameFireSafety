@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>pp02_findFire</title>
+      	<link href="stockImageGallery.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="bodywrapper">
+            <div class="vMidway"><!--start of vertical centre container div-->
+                <div class="spaceB2e txt_alignCenter"><!-- Start of fixed body header section -->
+                    <h1 ondblclick="window.open('pp03_evac.html');">Fire Safety</h1> 
+                </div> <!-- End of fixed body header section -->
+                
+                <div id="div_alarm" class="spaceB2e txt_alignCenter"><!-- Alarm; left div-->
+              		<a href="start.html"><button class="red_bkGnd cntrWidth spaceB1e" type="button" name="btn_Return" >Return</button></a>
+            	</div>
+                
+                <div class="spaceB2e txt_alignCenter">
+                    <div id="div_response">
+                        <p id="txt_response"><!--Javascript will output the response text here--></p>    
+                    </div>
+                </div>
+                
+            </div><!--end of vertical centre container div-->
+        </div><!-- end tag of bodywrapper -->
+		<script type="text/javascript">
+			function response() {
+				resp=Array()
+				resp[0] = "What would you do if you found it? Are you a trained firefighter? If you don't show up at the designated assembly point people are going to stress out about you!";
+				resp[1] = "Are you still insistent on finding the fire...why? Did you bring a BBQ for lunch? Don't end up the BBQ, follow the teachers instructions and get to the designated assembly area.";
+				resp[2] = "Find the fire...what! No don't go looking for the fire, you can watch it from your designated assembly area so get to it, following the teachers instruction.";
+				resp[3] = "Were the sausages mum packed for lunch not cooked? Forget your lunch, you will survive without that, but you might not survive being a burnt sausage. Don't look for the fire, look to your teacher and follow their evacuation instructions.";
+				resp[4] = "Don't do that, it might just find you! Let the professional firefighters deal with it. Better to listen to the teacher and evacuate to the designated assembly area.";
+				var randNo=Math.floor(Math.random()*5);
+				document.getElementById("txt_response").innerHTML = resp[randNo];
+			 }
+			 window.onload = response;
+		</script>
+	</body>
+</html>
