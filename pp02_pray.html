@@ -25,18 +25,46 @@
                 
             </div><!--end of vertical centre container div-->
         </div><!-- end tag of bodywrapper -->
+        
 		<script type="text/javascript">
-			function response() {
+			//Open XML File (HTTP Request)
+			var xhttp = new XMLHttpRequest();
+		
+			// Will run the xhttp.open instruction (just like calling a function) when the system is ready. If the system is not ready, the xml response document is not loaded and the process_xml function not called.
+       		xhttp.onreadystatechange = function() {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+					process_xml(xhttp);
+           		}
+        	}
+		
+			// The above instruction will pass this next output to the process_xml function and call the function when conditions are met. 
+        	xhttp.open("GET", "a02_responses.xml", true);
+        	xhttp.send();
+			//End HTTP Request
+		
+			function process_xml(xml) // The value of xml is passed by the instruction calling this function (process_xml(xhttp)—line 36. (Basically xml is representing the xml response document.
+			{
 				resp=Array()
-				resp[0] = "The lord moves in mysterious ways! The lord also gave you legs so you could save yourself. Obey the teacher and evacuate to the designated assembly area.";
-				resp[1] = "Pray!!! You can't rely on the lord all the time. Listen to the teacher and get to the evacuation assembly area then pray!";
-				resp[2] = "Pray all you like, but first get to the designated assembly area. Obey the teacher and evacuate. You can pray from there!";
-				resp[3] = "Still praying...is it working? Everybody else might be praying for you if you don't get to the designated area! Follow the teachers intructions and they will lead you there";
-				resp[4] = "Pray your legs are working well and use them to get to the designated assembly area. Obey the teacher who will lead you all there. Make sure you bring your friends with you and don't stop to cook your launch along the way!";
-				var randNo=Math.floor(Math.random()*5);
+
+				//Load the XML File
+				var xmlDoc = xml.responseXML;
+			
+				//Create an Array of Response Objects
+				x = xmlDoc.getElementsByTagName("responsePray");
+			
+				//Loop through Response Objects and assign nodevalue to the resp array
+            	for (i = 0; i < x.length ;i++) {
+              		//document.write(x[i].childNodes[0].nodeValue); 
+			   		resp.push(x[i].childNodes[0].nodeValue);  
+            	}
+			
+				var n=resp.length;
+				var randNo=Math.floor(Math.random()*n);
+			
+				//Copy the content of the random array value to the HTML Div
 				document.getElementById("txt_response").innerHTML = resp[randNo];
-			 }
-			 window.onload = response;
+			}
 		</script>
+        
 	</body>
 </html>

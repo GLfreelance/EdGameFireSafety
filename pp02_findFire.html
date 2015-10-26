@@ -25,18 +25,46 @@
                 
             </div><!--end of vertical centre container div-->
         </div><!-- end tag of bodywrapper -->
+        
 		<script type="text/javascript">
-			function response() {
+			//Open XML File (HTTP Request)
+			var xhttp = new XMLHttpRequest();
+		
+			// Will run the xhttp.open instruction (just like calling a function) when the system is ready. If the system is not ready, the xml response document is not loaded and the process_xml function not called.
+       		xhttp.onreadystatechange = function() {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+					process_xml(xhttp);
+           		}
+        	}
+		
+			// The above instruction will pass this next output to the process_xml function and call the function when conditions are met. 
+        	xhttp.open("GET", "a02_responses.xml", true);
+        	xhttp.send();
+			//End HTTP Request
+		
+			function process_xml(xml) // The value of xml is passed by the instruction calling this function (process_xml(xhttp)—line 36. (Basically xml is representing the xml response document.
+			{
 				resp=Array()
-				resp[0] = "What would you do if you found it? Are you a trained firefighter? If you don't show up at the designated assembly point people are going to stress out about you!";
-				resp[1] = "Are you still insistent on finding the fire...why? Did you bring a BBQ for lunch? Don't end up the BBQ, follow the teachers instructions and get to the designated assembly area.";
-				resp[2] = "Find the fire...what! No don't go looking for the fire, you can watch it from your designated assembly area so get to it, following the teachers instruction.";
-				resp[3] = "Were the sausages mum packed for lunch not cooked? Forget your lunch, you will survive without that, but you might not survive being a burnt sausage. Don't look for the fire, look to your teacher and follow their evacuation instructions.";
-				resp[4] = "Don't do that, it might just find you! Let the professional firefighters deal with it. Better to listen to the teacher and evacuate to the designated assembly area.";
-				var randNo=Math.floor(Math.random()*5);
+
+				//Load the XML File
+				var xmlDoc = xml.responseXML;
+			
+				//Create an Array of Response Objects
+				x = xmlDoc.getElementsByTagName("responseFind");
+			
+				//Loop through Response Objects and assign nodevalue to the resp array
+            	for (i = 0; i < x.length ;i++) {
+              		//document.write(x[i].childNodes[0].nodeValue); 
+			   		resp.push(x[i].childNodes[0].nodeValue);  
+            	}
+			
+				var n=resp.length;
+				var randNo=Math.floor(Math.random()*n);
+			
+				//Copy the content of the random array value to the HTML Div
 				document.getElementById("txt_response").innerHTML = resp[randNo];
-			 }
-			 window.onload = response;
+			}
 		</script>
+        
 	</body>
 </html>

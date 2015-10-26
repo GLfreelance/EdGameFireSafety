@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<All>
+	<FindFireResponses>
+		<responseFind>
+			"What would you do if you found it? Are you a trained firefighter? If you don't show up at the designated assembly point people are going to stress out about you!"
+		</responseFind>
+		<responseFind>
+			"Are you still insistent on finding the fire...why? Did you bring a BBQ for lunch? Don't end up the BBQ, follow the teachers instructions and get to the designated assembly area."
+		</responseFind>
+		<responseFind>
+			"Find the fire...what! No don't go looking for the fire, you can watch it from your designated assembly area so get to it, following the teachers instruction."
+		</responseFind>
+		<responseFind>
+			"Were the sausages mum packed for lunch not cooked? Forget your lunch, you will survive without that, but you might not survive being a burnt sausage. Don't look for the fire, look to your teacher and follow their evacuation instructions."
+		</responseFind>
+		<responseFind>
+			"Don't do that, it might just find you! Let the professional firefighters deal with it. Better to listen to the teacher and evacuate to the designated assembly area."
+		</responseFind>	
+	</FindFireResponses>
+	
+	<hideResponses>
+		<responseHide>
+			"Hide! Not a good idea. If the heat misses you the smoke is likely to choke you! Do as your teacher instructs and make your way the the designated assembly area."
+		</responseHide>
+		<responseHide>
+			"Hide, my foot. If your teacher can't be found get to your designated evacuation assembly area and be counted, otherwise follow your teachers instruction."
+		</responseHide>
+		<responseHide>
+			"Hide!!! Fire spreads in all directions. It will burn you in hiding as easily as not in hiding. You need to listen to the teachers instruction and make your way to the designated assembly area."
+		</responseHide>
+		<responseHide>
+			"You can't hide from everything you know! Show everybody you are not afraid. Follow the teachers instruction and meet them at the designated assembly area. You might even be able to help others get there as well!"
+		</responseHide>
+		<responseHide>
+			"Hide! Fire doesn't play hide and seek. It is pretty good at burning up most hiding places though. Better listen to the teacher and evacuate to the designated assembly area."
+		</responseHide>
+	</hideResponses>
+	
+	<ignorResponse>
+		<responseIgnor>
+			"Are you sure a fire is not coming your way? Most alarms are for real; better to be safe than sorry and do as your teacher instructs."
+		</responseIgnor>
+		<responseIgnor>
+			"Ignore at your own peril...it is a great opportunity to get out of work lol. Don't ignore an alarm, do as instructed by the teacher and get to the assembly area and be counted."
+		</responseIgnor>
+		<responseIgnor>
+			"Ignore it!!! The fire is not going to ignore you when it reaches you. It will use you as a fuel source just as much as everything else around it, so follow the teachers instructions and evacuate to the designated assembly area"
+		</responseIgnor>
+		<responseIgnor>
+			"Do you ignore things that go bump in the night! I bet you jump! So jump to the alarm. Listen to the teacher and get to the designated assembly area to be counted."
+		</responseIgnor>
+		<responseIgnor>
+			"Ignore it! Is what you are doing that good that you would risk your life doing it? I suggest you better listen to the teacher and evacuate. Make sure everyone else comes with you!"
+		</responseIgnor>
+	</ignorResponse>
+	
+	<prayResponses>
+		<responsePray>
+			"The lord moves in mysterious ways! The lord also gave you legs so you could save yourself. Obey the teacher and evacuate to the designated assembly area."
+		</responsePray>
+		<responsePray>
+			"Pray!!! You can't rely on the lord all the time. Listen to the teacher and get to the evacuation assembly area then pray!"
+		</responsePray>
+		<responsePray>
+			"Pray all you like, but first get to the designated assembly area. Obey the teacher and evacuate. You can pray from there!"
+		</responsePray>
+		<responsePray>
+			"Still praying...is it working? Everybody else might be praying for you if you don't get to the designated area! Follow the teachers intructions and they will lead you there"
+		</responsePray>
+		<responsePray>
+			"Pray your legs are working well and use them to get to the designated assembly area. Obey the teacher who will lead you all there. Make sure you bring your friends with you and don't stop to cook your launch along the way!";
+		</responsePray>
+	</prayResponses>
+</All>
